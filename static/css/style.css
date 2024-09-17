@@ -1,5 +1,6 @@
 *{
     font-family: helvetica, arial;
+    font-size: 16px;
 }
 
 body{
@@ -8,31 +9,38 @@ body{
 
 #Main{
     display: flex;
-    width: 80%;
-    height: 80%;
+    width: 80vw;
+    height: 80vh;
     margin-top: 5%;
     margin-left: 10%;
     background-color: white;  
     box-shadow: 0px 0px 15px rgb(181, 144, 25);
-    border-radius: 5px;
+    border-radius: 15px;
     flex-grow: 1;
 }
 
 #Picbox{
     height: 80vh;
-    width: 90%;
+    width: 60%;
     /* background-color: #522A17; */
     background-image: url('../images/Pic1.jpg');
-    background-size: contain;
-    background-repeat: no-repeat    ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px  0px 0px 15px;
+
 }
 
 #Textbox{
-    /* margin-left: 10px; */
+    height: 80vh;
+    width: 40%;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     line-height: 1.2;
+    overflow-y: auto;
+    overflow-x: auto;
 }
 
 h1{
@@ -95,3 +103,38 @@ h1{
     justify-content: center;
     
 }
+
+/* Media queries */
+
+
+@media (min-aspect-ratio: 1/1) and (max-aspect-ratio:16/9){
+    #Picbox {
+        width:50%
+        height:80vh
+    }
+
+    #Textbox {
+        width: 50%;
+        margin-bottom: 5px;
+        flex-shrink: 1;
+    }
+
+    #Main{
+        margin-top: 10%;
+    }
+}
+
+@media (max-aspect-ratio: 1/1) {
+    #Picbox {
+        display: none;      
+    }
+    #Textbox {
+        width: 90vw;
+        margin-left: 15px;
+        flex-shrink: 1;
+    }
+    #Main{
+        margin-top: 10%;
+    }
+}
+

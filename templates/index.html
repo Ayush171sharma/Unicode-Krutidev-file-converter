@@ -20,20 +20,21 @@
                 <li>Click "Convert"</li>
             </ul>
             <div id="forM">
-                <form id="uploadForm" enctype="multipart/form-data" action="/upload" method="POST">
+                <form id="uploadForm" enctype="multipart/form-data" action="" method="POST">
                     <label for="fileInput">Upload DOCX/DOC file: <br></label>
                     <input type="file" id="fileInput" name="file" accept=".docx,.doc" required><br><br>
         
-                    <label for="conversionType">Select Conversion Type:</label>
+                    <label for="conversion_type">Select Conversion Type:</label>
                     <br><br> 
-                    <select id="conversionType" name="conversionType" required>
-                    <option value="unicode_to_krutidev">Unicode to Krutidev</option>
-                    <option value="krutidev_to_unicode">Krutidev to Unicode</option>
+                    <select id="conversion_type" name="conversion_type" required>
+                        <option value="unicode_to_krutidev">Unicode to Krutidev</option>
+                        <option value="krutidev_to_unicode">Krutidev to Unicode</option>
                     </select><br><br>
         
                     <div id="button">
-                        <button id="submit">Convert</button>
-                    </div>         
+                        <button id="submit" type="submit">Convert</button>
+                    </div>      
+                </form>   
             </div>
             
     </form>
